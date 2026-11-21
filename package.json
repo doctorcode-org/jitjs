@@ -1,0 +1,659 @@
+{
+  "name": "jitjs-typescript",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A tree-shakeable TypeScript rewrite of the JavaScript InfoVis Toolkit",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/doctorcode-org/jitjs.git"
+  },
+  "type": "module",
+  "sideEffects": false,
+  "types": "./dist/index.d.ts",
+  "module": "./dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./core/geometry": {
+      "types": "./dist/core/geometry.d.ts",
+      "import": "./dist/core/geometry.js"
+    },
+    "./core/util": {
+      "types": "./dist/core/util.d.ts",
+      "import": "./dist/core/util.js"
+    },
+    "./core/json": {
+      "types": "./dist/core/json.d.ts",
+      "import": "./dist/core/json.js"
+    },
+    "./core/easing": {
+      "types": "./dist/core/easing.d.ts",
+      "import": "./dist/core/easing.js"
+    },
+    "./core/animation": {
+      "types": "./dist/core/animation.d.ts",
+      "import": "./dist/core/animation.js"
+    },
+    "./core/transitions": {
+      "types": "./dist/core/transitions.d.ts",
+      "import": "./dist/core/transitions.js"
+    },
+    "./core/sequence": {
+      "types": "./dist/core/sequence.d.ts",
+      "import": "./dist/core/sequence.js"
+    },
+    "./graph": {
+      "types": "./dist/graph/graph.d.ts",
+      "import": "./dist/graph/graph.js"
+    },
+    "./graph/geometry": {
+      "types": "./dist/graph/geometry.d.ts",
+      "import": "./dist/graph/geometry.js"
+    },
+    "./graph/hit-testing": {
+      "types": "./dist/graph/hit-testing.d.ts",
+      "import": "./dist/graph/hit-testing.js"
+    },
+    "./graph/moebius": {
+      "types": "./dist/graph/moebius.d.ts",
+      "import": "./dist/graph/moebius.js"
+    },
+    "./graph/plot3d": {
+      "types": "./dist/graph/plot3d.d.ts",
+      "import": "./dist/graph/plot3d.js"
+    },
+    "./graph/interpolation": {
+      "types": "./dist/graph/interpolation.d.ts",
+      "import": "./dist/graph/interpolation.js"
+    },
+    "./graph/plot-preparation": {
+      "types": "./dist/graph/plot-preparation.d.ts",
+      "import": "./dist/graph/plot-preparation.js"
+    },
+    "./graph/plot-animation": {
+      "types": "./dist/graph/plot-animation.d.ts",
+      "import": "./dist/graph/plot-animation.js"
+    },
+    "./graph/plot-interpolators": {
+      "types": "./dist/graph/plot-interpolators.d.ts",
+      "import": "./dist/graph/plot-interpolators.js"
+    },
+    "./graph/plotting": {
+      "types": "./dist/graph/plotting.d.ts",
+      "import": "./dist/graph/plotting.js"
+    },
+    "./graph/plot-tree": {
+      "types": "./dist/graph/plot-tree.d.ts",
+      "import": "./dist/graph/plot-tree.js"
+    },
+    "./graph/node-fx": {
+      "types": "./dist/graph/node-fx.d.ts",
+      "import": "./dist/graph/node-fx.js"
+    },
+    "./graph/operations/sum": {
+      "types": "./dist/graph/operations/sum.d.ts",
+      "import": "./dist/graph/operations/sum.js"
+    },
+    "./graph/operations/morph": {
+      "types": "./dist/graph/operations/morph.d.ts",
+      "import": "./dist/graph/operations/morph.js"
+    },
+    "./graph/operations/remove": {
+      "types": "./dist/graph/operations/remove.d.ts",
+      "import": "./dist/graph/operations/remove.js"
+    },
+    "./graph/operations/subtree": {
+      "types": "./dist/graph/operations/subtree.d.ts",
+      "import": "./dist/graph/operations/subtree.js"
+    },
+    "./graph/operations/transform": {
+      "types": "./dist/graph/operations/transform.d.ts",
+      "import": "./dist/graph/operations/transform.js"
+    },
+    "./extras/event-info": {
+      "types": "./dist/extras/event-info.d.ts",
+      "import": "./dist/extras/event-info.js"
+    },
+    "./extras/events": {
+      "types": "./dist/extras/events.d.ts",
+      "import": "./dist/extras/events.js"
+    },
+    "./extras/navigation": {
+      "types": "./dist/extras/navigation.d.ts",
+      "import": "./dist/extras/navigation.js"
+    },
+    "./extras/node-styles": {
+      "types": "./dist/extras/node-styles.d.ts",
+      "import": "./dist/extras/node-styles.js"
+    },
+    "./extras/tooltip": {
+      "types": "./dist/extras/tooltip.d.ts",
+      "import": "./dist/extras/tooltip.js"
+    },
+    "./extras/input-manager": {
+      "types": "./dist/extras/input-manager.d.ts",
+      "import": "./dist/extras/input-manager.js"
+    },
+    "./graph/rendering/contracts": {
+      "types": "./dist/graph/rendering/contracts.d.ts",
+      "import": "./dist/graph/rendering/contracts.js"
+    },
+    "./graph/rendering/elements": {
+      "types": "./dist/graph/rendering/elements.d.ts",
+      "import": "./dist/graph/rendering/elements.js"
+    },
+    "./graph/rendering/node-shapes": {
+      "types": "./dist/graph/rendering/node-shapes.d.ts",
+      "import": "./dist/graph/rendering/node-shapes.js"
+    },
+    "./graph/rendering/edge-shapes": {
+      "types": "./dist/graph/rendering/edge-shapes.d.ts",
+      "import": "./dist/graph/rendering/edge-shapes.js"
+    },
+    "./graph/labels/contracts": {
+      "types": "./dist/graph/labels/contracts.d.ts",
+      "import": "./dist/graph/labels/contracts.js"
+    },
+    "./graph/labels/native": {
+      "types": "./dist/graph/labels/native.d.ts",
+      "import": "./dist/graph/labels/native.js"
+    },
+    "./graph/labels/dom": {
+      "types": "./dist/graph/labels/dom.d.ts",
+      "import": "./dist/graph/labels/dom.js"
+    },
+    "./graph/labels/html": {
+      "types": "./dist/graph/labels/html.d.ts",
+      "import": "./dist/graph/labels/html.js"
+    },
+    "./graph/labels/svg": {
+      "types": "./dist/graph/labels/svg.d.ts",
+      "import": "./dist/graph/labels/svg.js"
+    },
+    "./graph/labels/placement": {
+      "types": "./dist/graph/labels/placement.d.ts",
+      "import": "./dist/graph/labels/placement.js"
+    },
+    "./loader": {
+      "types": "./dist/loader/loader.d.ts",
+      "import": "./dist/loader/loader.js"
+    },
+    "./layouts/grid": {
+      "types": "./dist/layouts/grid.d.ts",
+      "import": "./dist/layouts/grid.js"
+    },
+    "./layouts/radial": {
+      "types": "./dist/layouts/radial.d.ts",
+      "import": "./dist/layouts/radial.js"
+    },
+    "./layouts/force-directed": {
+      "types": "./dist/layouts/force-directed.d.ts",
+      "import": "./dist/layouts/force-directed.js"
+    },
+    "./layouts/force-directed3d": {
+      "types": "./dist/layouts/force-directed3d.d.ts",
+      "import": "./dist/layouts/force-directed3d.js"
+    },
+    "./layouts/tree": {
+      "types": "./dist/layouts/tree.d.ts",
+      "import": "./dist/layouts/tree.js"
+    },
+    "./layouts/icicle": {
+      "types": "./dist/layouts/icicle.d.ts",
+      "import": "./dist/layouts/icicle.js"
+    },
+    "./layouts/treemap/types": {
+      "types": "./dist/layouts/treemap/types.d.ts",
+      "import": "./dist/layouts/treemap/types.js"
+    },
+    "./layouts/treemap/area": {
+      "types": "./dist/layouts/treemap/area.d.ts",
+      "import": "./dist/layouts/treemap/area.js"
+    },
+    "./layouts/treemap/slice-and-dice": {
+      "types": "./dist/layouts/treemap/slice-and-dice.d.ts",
+      "import": "./dist/layouts/treemap/slice-and-dice.js"
+    },
+    "./layouts/treemap/squarified": {
+      "types": "./dist/layouts/treemap/squarified.d.ts",
+      "import": "./dist/layouts/treemap/squarified.js"
+    },
+    "./layouts/treemap/strip": {
+      "types": "./dist/layouts/treemap/strip.d.ts",
+      "import": "./dist/layouts/treemap/strip.js"
+    },
+    "./layouts/treemap/voronoi": {
+      "types": "./dist/layouts/treemap/voronoi.d.ts",
+      "import": "./dist/layouts/treemap/voronoi.js"
+    },
+    "./layouts/node-dimensions": {
+      "types": "./dist/layouts/node-dimensions.d.ts",
+      "import": "./dist/layouts/node-dimensions.js"
+    },
+    "./visualizations/force-directed": {
+      "types": "./dist/visualizations/force-directed.d.ts",
+      "import": "./dist/visualizations/force-directed.js"
+    },
+    "./visualizations/force-directed3d": {
+      "types": "./dist/visualizations/force-directed3d.d.ts",
+      "import": "./dist/visualizations/force-directed3d.js"
+    },
+    "./visualizations/grid-chart": {
+      "types": "./dist/visualizations/grid-chart.d.ts",
+      "import": "./dist/visualizations/grid-chart.js"
+    },
+    "./visualizations/grid-chart-renderers": {
+      "types": "./dist/visualizations/grid-chart-renderers.d.ts",
+      "import": "./dist/visualizations/grid-chart-renderers.js"
+    },
+    "./visualizations/grid-chart-dom-labels": {
+      "types": "./dist/visualizations/grid-chart-dom-labels.d.ts",
+      "import": "./dist/visualizations/grid-chart-dom-labels.js"
+    },
+    "./visualizations/grid-chart-html-labels": {
+      "types": "./dist/visualizations/grid-chart-html-labels.d.ts",
+      "import": "./dist/visualizations/grid-chart-html-labels.js"
+    },
+    "./visualizations/grid-chart-svg-labels": {
+      "types": "./dist/visualizations/grid-chart-svg-labels.d.ts",
+      "import": "./dist/visualizations/grid-chart-svg-labels.js"
+    },
+    "./visualizations/heat-map": {
+      "types": "./dist/visualizations/heat-map.d.ts",
+      "import": "./dist/visualizations/heat-map.js"
+    },
+    "./visualizations/heat-map-native-labels": {
+      "types": "./dist/visualizations/heat-map-native-labels.d.ts",
+      "import": "./dist/visualizations/heat-map-native-labels.js"
+    },
+    "./visualizations/time-graph": {
+      "types": "./dist/visualizations/time-graph.d.ts",
+      "import": "./dist/visualizations/time-graph.js"
+    },
+    "./visualizations/time-graph-native-labels": {
+      "types": "./dist/visualizations/time-graph-native-labels.d.ts",
+      "import": "./dist/visualizations/time-graph-native-labels.js"
+    },
+    "./visualizations/force-directed-renderer-contracts": {
+      "types": "./dist/visualizations/force-directed-renderer-contracts.d.ts",
+      "import": "./dist/visualizations/force-directed-renderer-contracts.js"
+    },
+    "./visualizations/force-directed-node-renderers": {
+      "types": "./dist/visualizations/force-directed-node-renderers.d.ts",
+      "import": "./dist/visualizations/force-directed-node-renderers.js"
+    },
+    "./visualizations/force-directed-edge-renderers": {
+      "types": "./dist/visualizations/force-directed-edge-renderers.d.ts",
+      "import": "./dist/visualizations/force-directed-edge-renderers.js"
+    },
+    "./visualizations/force-directed-label-contracts": {
+      "types": "./dist/visualizations/force-directed-label-contracts.d.ts",
+      "import": "./dist/visualizations/force-directed-label-contracts.js"
+    },
+    "./visualizations/force-directed-dom-labels": {
+      "types": "./dist/visualizations/force-directed-dom-labels.d.ts",
+      "import": "./dist/visualizations/force-directed-dom-labels.js"
+    },
+    "./visualizations/force-directed-native-labels": {
+      "types": "./dist/visualizations/force-directed-native-labels.d.ts",
+      "import": "./dist/visualizations/force-directed-native-labels.js"
+    },
+    "./visualizations/force-directed-html-labels": {
+      "types": "./dist/visualizations/force-directed-html-labels.d.ts",
+      "import": "./dist/visualizations/force-directed-html-labels.js"
+    },
+    "./visualizations/force-directed-svg-labels": {
+      "types": "./dist/visualizations/force-directed-svg-labels.d.ts",
+      "import": "./dist/visualizations/force-directed-svg-labels.js"
+    },
+    "./visualizations/icicle": {
+      "types": "./dist/visualizations/icicle.d.ts",
+      "import": "./dist/visualizations/icicle.js"
+    },
+    "./visualizations/icicle-group": {
+      "types": "./dist/visualizations/icicle-group.d.ts",
+      "import": "./dist/visualizations/icicle-group.js"
+    },
+    "./visualizations/icicle-workflow": {
+      "types": "./dist/visualizations/icicle-workflow.d.ts",
+      "import": "./dist/visualizations/icicle-workflow.js"
+    },
+    "./visualizations/icicle-renderer-contracts": {
+      "types": "./dist/visualizations/icicle-renderer-contracts.d.ts",
+      "import": "./dist/visualizations/icicle-renderer-contracts.js"
+    },
+    "./visualizations/icicle-node-renderers": {
+      "types": "./dist/visualizations/icicle-node-renderers.d.ts",
+      "import": "./dist/visualizations/icicle-node-renderers.js"
+    },
+    "./visualizations/icicle-edge-renderers": {
+      "types": "./dist/visualizations/icicle-edge-renderers.d.ts",
+      "import": "./dist/visualizations/icicle-edge-renderers.js"
+    },
+    "./visualizations/icicle-dom-labels": {
+      "types": "./dist/visualizations/icicle-dom-labels.d.ts",
+      "import": "./dist/visualizations/icicle-dom-labels.js"
+    },
+    "./visualizations/icicle-native-labels": {
+      "types": "./dist/visualizations/icicle-native-labels.d.ts",
+      "import": "./dist/visualizations/icicle-native-labels.js"
+    },
+    "./visualizations/icicle-html-labels": {
+      "types": "./dist/visualizations/icicle-html-labels.d.ts",
+      "import": "./dist/visualizations/icicle-html-labels.js"
+    },
+    "./visualizations/icicle-svg-labels": {
+      "types": "./dist/visualizations/icicle-svg-labels.d.ts",
+      "import": "./dist/visualizations/icicle-svg-labels.js"
+    },
+    "./visualizations/rgraph": {
+      "types": "./dist/visualizations/rgraph.d.ts",
+      "import": "./dist/visualizations/rgraph.js"
+    },
+    "./visualizations/rgraph-renderer-contracts": {
+      "types": "./dist/visualizations/rgraph-renderer-contracts.d.ts",
+      "import": "./dist/visualizations/rgraph-renderer-contracts.js"
+    },
+    "./visualizations/rgraph-node-renderers": {
+      "types": "./dist/visualizations/rgraph-node-renderers.d.ts",
+      "import": "./dist/visualizations/rgraph-node-renderers.js"
+    },
+    "./visualizations/rgraph-edge-renderers": {
+      "types": "./dist/visualizations/rgraph-edge-renderers.d.ts",
+      "import": "./dist/visualizations/rgraph-edge-renderers.js"
+    },
+    "./visualizations/rgraph-dom-labels": {
+      "types": "./dist/visualizations/rgraph-dom-labels.d.ts",
+      "import": "./dist/visualizations/rgraph-dom-labels.js"
+    },
+    "./visualizations/rgraph-native-labels": {
+      "types": "./dist/visualizations/rgraph-native-labels.d.ts",
+      "import": "./dist/visualizations/rgraph-native-labels.js"
+    },
+    "./visualizations/rgraph-html-labels": {
+      "types": "./dist/visualizations/rgraph-html-labels.d.ts",
+      "import": "./dist/visualizations/rgraph-html-labels.js"
+    },
+    "./visualizations/rgraph-svg-labels": {
+      "types": "./dist/visualizations/rgraph-svg-labels.d.ts",
+      "import": "./dist/visualizations/rgraph-svg-labels.js"
+    },
+    "./visualizations/hypertree": {
+      "types": "./dist/visualizations/hypertree.d.ts",
+      "import": "./dist/visualizations/hypertree.js"
+    },
+    "./visualizations/hypertree-renderer-contracts": {
+      "types": "./dist/visualizations/hypertree-renderer-contracts.d.ts",
+      "import": "./dist/visualizations/hypertree-renderer-contracts.js"
+    },
+    "./visualizations/hypertree-node-renderers": {
+      "types": "./dist/visualizations/hypertree-node-renderers.d.ts",
+      "import": "./dist/visualizations/hypertree-node-renderers.js"
+    },
+    "./visualizations/hypertree-edge-renderers": {
+      "types": "./dist/visualizations/hypertree-edge-renderers.d.ts",
+      "import": "./dist/visualizations/hypertree-edge-renderers.js"
+    },
+    "./visualizations/hypertree-label-contracts": {
+      "types": "./dist/visualizations/hypertree-label-contracts.d.ts",
+      "import": "./dist/visualizations/hypertree-label-contracts.js"
+    },
+    "./visualizations/hypertree-dom-labels": {
+      "types": "./dist/visualizations/hypertree-dom-labels.d.ts",
+      "import": "./dist/visualizations/hypertree-dom-labels.js"
+    },
+    "./visualizations/hypertree-native-labels": {
+      "types": "./dist/visualizations/hypertree-native-labels.d.ts",
+      "import": "./dist/visualizations/hypertree-native-labels.js"
+    },
+    "./visualizations/hypertree-html-labels": {
+      "types": "./dist/visualizations/hypertree-html-labels.d.ts",
+      "import": "./dist/visualizations/hypertree-html-labels.js"
+    },
+    "./visualizations/hypertree-svg-labels": {
+      "types": "./dist/visualizations/hypertree-svg-labels.d.ts",
+      "import": "./dist/visualizations/hypertree-svg-labels.js"
+    },
+    "./visualizations/sunburst": {
+      "types": "./dist/visualizations/sunburst.d.ts",
+      "import": "./dist/visualizations/sunburst.js"
+    },
+    "./visualizations/sunburst-renderer-contracts": {
+      "types": "./dist/visualizations/sunburst-renderer-contracts.d.ts",
+      "import": "./dist/visualizations/sunburst-renderer-contracts.js"
+    },
+    "./visualizations/sunburst-node-renderers": {
+      "types": "./dist/visualizations/sunburst-node-renderers.d.ts",
+      "import": "./dist/visualizations/sunburst-node-renderers.js"
+    },
+    "./visualizations/sunburst-edge-renderers": {
+      "types": "./dist/visualizations/sunburst-edge-renderers.d.ts",
+      "import": "./dist/visualizations/sunburst-edge-renderers.js"
+    },
+    "./visualizations/sunburst-label-contracts": {
+      "types": "./dist/visualizations/sunburst-label-contracts.d.ts",
+      "import": "./dist/visualizations/sunburst-label-contracts.js"
+    },
+    "./visualizations/sunburst-dom-labels": {
+      "types": "./dist/visualizations/sunburst-dom-labels.d.ts",
+      "import": "./dist/visualizations/sunburst-dom-labels.js"
+    },
+    "./visualizations/sunburst-native-labels": {
+      "types": "./dist/visualizations/sunburst-native-labels.d.ts",
+      "import": "./dist/visualizations/sunburst-native-labels.js"
+    },
+    "./visualizations/sunburst-html-labels": {
+      "types": "./dist/visualizations/sunburst-html-labels.d.ts",
+      "import": "./dist/visualizations/sunburst-html-labels.js"
+    },
+    "./visualizations/sunburst-svg-labels": {
+      "types": "./dist/visualizations/sunburst-svg-labels.d.ts",
+      "import": "./dist/visualizations/sunburst-svg-labels.js"
+    },
+    "./visualizations/treemap": {
+      "types": "./dist/visualizations/treemap.d.ts",
+      "import": "./dist/visualizations/treemap.js"
+    },
+    "./visualizations/treemap-slice-and-dice": {
+      "types": "./dist/visualizations/treemap-slice-and-dice.d.ts",
+      "import": "./dist/visualizations/treemap-slice-and-dice.js"
+    },
+    "./visualizations/treemap-squarified": {
+      "types": "./dist/visualizations/treemap-squarified.d.ts",
+      "import": "./dist/visualizations/treemap-squarified.js"
+    },
+    "./visualizations/treemap-strip": {
+      "types": "./dist/visualizations/treemap-strip.d.ts",
+      "import": "./dist/visualizations/treemap-strip.js"
+    },
+    "./visualizations/treemap-voronoi": {
+      "types": "./dist/visualizations/treemap-voronoi.d.ts",
+      "import": "./dist/visualizations/treemap-voronoi.js"
+    },
+    "./visualizations/treemap-renderer-contracts": {
+      "types": "./dist/visualizations/treemap-renderer-contracts.d.ts",
+      "import": "./dist/visualizations/treemap-renderer-contracts.js"
+    },
+    "./visualizations/treemap-node-renderers": {
+      "types": "./dist/visualizations/treemap-node-renderers.d.ts",
+      "import": "./dist/visualizations/treemap-node-renderers.js"
+    },
+    "./visualizations/voronoi-node-renderers": {
+      "types": "./dist/visualizations/voronoi-node-renderers.d.ts",
+      "import": "./dist/visualizations/voronoi-node-renderers.js"
+    },
+    "./visualizations/treemap-edge-renderers": {
+      "types": "./dist/visualizations/treemap-edge-renderers.d.ts",
+      "import": "./dist/visualizations/treemap-edge-renderers.js"
+    },
+    "./visualizations/treemap-label-contracts": {
+      "types": "./dist/visualizations/treemap-label-contracts.d.ts",
+      "import": "./dist/visualizations/treemap-label-contracts.js"
+    },
+    "./visualizations/treemap-dom-labels": {
+      "types": "./dist/visualizations/treemap-dom-labels.d.ts",
+      "import": "./dist/visualizations/treemap-dom-labels.js"
+    },
+    "./visualizations/treemap-native-labels": {
+      "types": "./dist/visualizations/treemap-native-labels.d.ts",
+      "import": "./dist/visualizations/treemap-native-labels.js"
+    },
+    "./visualizations/treemap-html-labels": {
+      "types": "./dist/visualizations/treemap-html-labels.d.ts",
+      "import": "./dist/visualizations/treemap-html-labels.js"
+    },
+    "./visualizations/treemap-svg-labels": {
+      "types": "./dist/visualizations/treemap-svg-labels.d.ts",
+      "import": "./dist/visualizations/treemap-svg-labels.js"
+    },
+    "./visualizations/space-tree": {
+      "types": "./dist/visualizations/space-tree.d.ts",
+      "import": "./dist/visualizations/space-tree.js"
+    },
+    "./visualizations/space-tree-group": {
+      "types": "./dist/visualizations/space-tree-group.d.ts",
+      "import": "./dist/visualizations/space-tree-group.js"
+    },
+    "./visualizations/space-tree-geometry": {
+      "types": "./dist/visualizations/space-tree-geometry.d.ts",
+      "import": "./dist/visualizations/space-tree-geometry.js"
+    },
+    "./visualizations/space-tree-workflow": {
+      "types": "./dist/visualizations/space-tree-workflow.d.ts",
+      "import": "./dist/visualizations/space-tree-workflow.js"
+    },
+    "./visualizations/space-tree-renderer-contracts": {
+      "types": "./dist/visualizations/space-tree-renderer-contracts.d.ts",
+      "import": "./dist/visualizations/space-tree-renderer-contracts.js"
+    },
+    "./visualizations/space-tree-node-renderers": {
+      "types": "./dist/visualizations/space-tree-node-renderers.d.ts",
+      "import": "./dist/visualizations/space-tree-node-renderers.js"
+    },
+    "./visualizations/space-tree-edge-renderers": {
+      "types": "./dist/visualizations/space-tree-edge-renderers.d.ts",
+      "import": "./dist/visualizations/space-tree-edge-renderers.js"
+    },
+    "./visualizations/space-tree-label-contracts": {
+      "types": "./dist/visualizations/space-tree-label-contracts.d.ts",
+      "import": "./dist/visualizations/space-tree-label-contracts.js"
+    },
+    "./visualizations/space-tree-dom-labels": {
+      "types": "./dist/visualizations/space-tree-dom-labels.d.ts",
+      "import": "./dist/visualizations/space-tree-dom-labels.js"
+    },
+    "./visualizations/space-tree-native-labels": {
+      "types": "./dist/visualizations/space-tree-native-labels.d.ts",
+      "import": "./dist/visualizations/space-tree-native-labels.js"
+    },
+    "./visualizations/space-tree-html-labels": {
+      "types": "./dist/visualizations/space-tree-html-labels.d.ts",
+      "import": "./dist/visualizations/space-tree-html-labels.js"
+    },
+    "./visualizations/space-tree-svg-labels": {
+      "types": "./dist/visualizations/space-tree-svg-labels.d.ts",
+      "import": "./dist/visualizations/space-tree-svg-labels.js"
+    },
+    "./charts/area-chart": {
+      "types": "./dist/charts/area-chart.d.ts",
+      "import": "./dist/charts/area-chart.js"
+    },
+    "./charts/area-chart-renderers": {
+      "types": "./dist/charts/area-chart-renderers.d.ts",
+      "import": "./dist/charts/area-chart-renderers.js"
+    },
+    "./charts/stream-chart": {
+      "types": "./dist/charts/stream-chart.d.ts",
+      "import": "./dist/charts/stream-chart.js"
+    },
+    "./charts/stream-chart-renderers": {
+      "types": "./dist/charts/stream-chart-renderers.d.ts",
+      "import": "./dist/charts/stream-chart-renderers.js"
+    },
+    "./charts/bar-chart": {
+      "types": "./dist/charts/bar-chart.d.ts",
+      "import": "./dist/charts/bar-chart.js"
+    },
+    "./charts/bar-chart-renderers": {
+      "types": "./dist/charts/bar-chart-renderers.d.ts",
+      "import": "./dist/charts/bar-chart-renderers.js"
+    },
+    "./charts/pie-chart": {
+      "types": "./dist/charts/pie-chart.d.ts",
+      "import": "./dist/charts/pie-chart.js"
+    },
+    "./charts/pie-chart-renderers": {
+      "types": "./dist/charts/pie-chart-renderers.d.ts",
+      "import": "./dist/charts/pie-chart-renderers.js"
+    },
+    "./options/*": {
+      "types": "./dist/options/*.d.ts",
+      "import": "./dist/options/*.js"
+    },
+    "./browser/dom": {
+      "types": "./dist/browser/dom.d.ts",
+      "import": "./dist/browser/dom.js"
+    },
+    "./canvas": {
+      "types": "./dist/canvas/canvas.d.ts",
+      "import": "./dist/canvas/canvas.js"
+    },
+    "./canvas/canvas3d": {
+      "types": "./dist/canvas/canvas3d.d.ts",
+      "import": "./dist/canvas/canvas3d.js"
+    },
+    "./canvas/circles-background": {
+      "types": "./dist/canvas/circles-background.d.ts",
+      "import": "./dist/canvas/circles-background.js"
+    },
+    "./geometry/vector3": {
+      "types": "./dist/geometry/vector3.d.ts",
+      "import": "./dist/geometry/vector3.js"
+    },
+    "./geometry/computational": {
+      "types": "./dist/geometry/computational.d.ts",
+      "import": "./dist/geometry/computational.js"
+    },
+    "./geometry/o3d": {
+      "types": "./dist/geometry/o3d.d.ts",
+      "import": "./dist/geometry/o3d.js"
+    },
+    "./geometry/matrix4": {
+      "types": "./dist/geometry/matrix4.d.ts",
+      "import": "./dist/geometry/matrix4.js"
+    },
+    "./geometry/camera": {
+      "types": "./dist/geometry/camera.d.ts",
+      "import": "./dist/geometry/camera.js"
+    },
+    "./types": {
+      "types": "./dist/types.d.ts",
+      "import": "./dist/types.js"
+    }
+  },
+  "scripts": {
+    "clean": "node ./scripts/clean.mjs",
+    "build": "npm run clean && tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test",
+    "check": "npm run typecheck && npm test",
+    "build:demo:market": "npm run build && esbuild ./examples/market-heatmap/main.js --bundle --format=iife --platform=browser --target=es2020 --outfile=./examples/market-heatmap/market-heatmap.bundle.js",
+    "demo:market": "npm run build:demo:market && node ./scripts/serve-market-heatmap.mjs",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run check"
+  },
+  "packageManager": "npm@11.13.0",
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2",
+    "typescript": "^5.9.2"
+  }
+}

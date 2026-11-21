@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
+    <title>نقشه حرارتی بازار — JIT TypeScript</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <div class="brand-block">
+          <div class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></div>
+          <div>
+            <p class="eyebrow">JIT TYPESCRIPT LAB</p>
+            <h1>نقشه حرارتی بازار</h1>
+          </div>
+        </div>
+        <div class="market-status">
+          <span class="live-dot"></span>
+          <span>داده‌ی شبیه‌سازی‌شده</span>
+          <time id="last-update">—</time>
+        </div>
+      </header>
+
+      <section class="toolbar" aria-label="کنترل‌های نقشه بازار">
+        <div class="breadcrumb-wrap">
+          <span class="toolbar-label">نمایش</span>
+          <strong id="breadcrumb">کل بازار</strong>
+        </div>
+        <div class="toolbar-actions">
+          <label>
+            <span>بازه</span>
+            <select id="timeframe">
+              <option value="day">یک‌روزه</option>
+              <option value="week">هفتگی</option>
+              <option value="month">ماهانه</option>
+            </select>
+          </label>
+          <label>
+            <span>چیدمان</span>
+            <select id="layout">
+              <option value="squarified">Squarified</option>
+              <option value="strip">Strip</option>
+              <option value="slice">Slice & Dice</option>
+            </select>
+          </label>
+          <button id="go-parent" class="button secondary" disabled>بازگشت به والد</button>
+          <button id="reset-market" class="button ghost">بازنشانی</button>
+          <button id="simulate" class="button primary"><span class="spark">↗</span> حرکت بعدی بازار</button>
+        </div>
+      </section>
+
+      <section class="dashboard">
+        <aside class="stats-panel">
+          <div class="index-card">
+            <span class="card-label">بازده وزنی بازار</span>
+            <strong id="market-move" dir="ltr">—</strong>
+            <small>بر پایه‌ی ارزش بازار</small>
+          </div>
+          <div class="stats-grid">
+            <div><span>ارزش کل</span><strong id="market-cap" dir="ltr">—</strong></div>
+            <div><span>مثبت</span><strong id="advances" class="positive">—</strong></div>
+            <div><span>منفی</span><strong id="declines" class="negative">—</strong></div>
+            <div><span>خنثی</span><strong id="unchanged">—</strong></div>
+          </div>
+          <div class="legend-card">
+            <span class="card-label">راهنمای بازده</span>
+            <div class="legend-scale" aria-hidden="true"></div>
+            <div class="legend-values" dir="ltr"><span>-5%</span><span>0</span><span>+5%</span></div>
+            <p>مساحت هر خانه نشان‌دهنده‌ی ارزش بازار است.</p>
+          </div>
+          <div id="selection-detail" class="selection-card">
+            <span class="card-label">جزئیات نماد</span>
+            <p>برای مشاهده‌ی جزئیات روی یک نماد کلیک کنید.</p>
+          </div>
+          <div class="help-card">
+            <span>راهنما</span>
+            <p>روی عنوان یک صنعت کلیک کنید تا وارد آن شوید. کلیک راست یا دکمه‌ی بازگشت، نمای والد را باز می‌کند.</p>
+          </div>
+        </aside>
+
+        <div id="heatmap" class="heatmap" aria-label="نقشه حرارتی تعاملی سهام"></div>
+      </section>
+    </main>
+
+    <div id="tooltip" class="tooltip" hidden></div>
+    <script src="./market-heatmap.bundle.js"></script>
+  </body>
+</html>
